@@ -40,7 +40,73 @@ Can you find an example where the chart or other data visualization is misrepres
 6. When is more data better? When is it worse?
 7. How do you keep up with economic and
   business news? How about data science news?
+
+### Week 7:
+1. What does PCA stand for and why is it useful? What preprocessing technique(s) is/are important before performing PCA on a dataset? Why is it important?
+* PCA = Principal Component Analysis
+* It is a useful dimensionality reduction technique.  PCA figures out the orthogonal dimensions that contribute the most to the variation in your data, essentially giving you a new coordinate axis from which to look at your data. It projects your data on these new, more useful dimensions, each made up of linear combinations of the original coordinates.  PCA tells you how much each dimension contributes to the variance in the data.  Since a few of the new dimensions (the principal components, PCs) usually contribute the most variation, you can decide how many of those to keep and then disregard all the others. If only, say, 5 PCs account for 95% of the variation, you can choose to ignore all other PCs and you have reduced your overall dimensionality to 5 dimensions.
+* You want to normalize your data before running PCA (to have a mean of 0 and a standard deviation of 1).  That way dimensions with larger numbers have the same effect on the calculations as dimensions with smaller numbers.
+
+2. What are eigenvalues and eigenvectors?
+* Linear transformations consist of just addition and scalar multiplication. They are operations that stretch or rotate the coordinate system.,
+* When you apply a linear transformation to a coordinate system, there can exist nonzero vectors (eigenvectors) that change only by a scalar factor (the eigenvector); they can stretch, but they keep their direction. 
+
+3. Describe the process used by the K Means clustering algorithm.
+* The number of clusters to use (k) is a given.
+* First randomly assigning cluster centroids.
+* Second, assign each point to the cluster with the nearest mean.
+* Third, re-calculate the centroid of the cluster, by taking the mean (in all dimensions) of the points in that cluster.
+* Repeat until the cluster centroids stop changing.
+
+4. What is a time when you let others down in a professional setting, and what did you do to remedy it? Or, if you didn’t what could you have done?
+* Personal growth story goes here.
+* Do not highlight a grave personality flaw, confess to breaking an important social norm, or show really bad judgment.
+* Best if the way you let people down was not really your fault, and you showed heroic ability in overcoming it and making it up to people.  Story about taking responsibility for your mistakes. 
+
+5. What are you proudest of having accomplished and why?
+* Use this to highlight traits that employers want to hear about.
+* Do not explicitly mention the trait that you're highlighting.
+* Stories with personal growth are best.
+
+6. What are 3 predictions you have about the world 20 years from now?
+* Do not make predictions about topics that are politically charged right now. 
+* Try making predictions within an area that the interviewer cares about.
+* Focus on optimistic predictions.
   
+### Week 7:
+1.  What is linear regression?
+- Linear Regression is a statistical model that seeks to describe the relationship between some y variable and one or more x variables.
+
+### Synonyms for "y variable"
+- Dependent Variable
+- Response Variable
+- Outcome Variable 
+- Predicted Variable
+- Measured Variable
+- Explained Variable
+- Label
+
+### Synonyms for "x variable(s)"
+- Indepent Variable
+- Explanatory Variable
+- Regressor
+- Covariate
+
+### The Equation for a Line
+2. What is the goal of linear regression?
+- A common equation for a line is y = mx + b, where m is the slope of the line and b is the y-intercept. 
+- Linear Regression seeks to **estimate** the slope and intercept values that describe a line that best fits the data points.
+
+3. What is residual error?
+- The residual error is the distance between points in our dataset and our regression line.
+
+4. What is the most common way to minimize residual error?
+- The most common method of estimating the slope and intercept is what's known as "Ordinary Least Squares" (OLS). (There are different methods of arriving at a line of best fit). OLS estimates the parameters that minimize the squared distance between each point in our dataset and our line of best fit. 
+
+\begin{align}
+SSE = \sum(y_i - \hat{y})^2
+\end{align}
+
 ### week 11:
 1. How are you today?
 2. How is object-oriented programming different from functional programming? What are some advantages or disadvantages of each?
@@ -54,8 +120,18 @@ Can you find an example where the chart or other data visualization is misrepres
 1. So far in this sprint you've used SQLite, PostgreSQL, and MongoDB. For each of these, consider the following questions:
 
 - What was easy about using this technology?
+  * SQLite is easy to create, populate, and query databases locally either through a SQLite browser
+  or in Python using the 'sqlite3' library.
+  * PostgreSQL has the perks of SQLite but with the ability to handle much larger applications performing ACID compliant transactions.
+    SQL query language shared among SQLite and PostgreSQL and other RDMS.
+  * MongoDB's ease it's based on its flexibility as a "NOSQL" database program using JSON that allows for various features to inserted or ommited for each observation.
+    Also MongoDB allows to work with huge databases that relational database management systems are not able to handle.
 - What was hard about using this technology?
+  * Learning how to properly use Python and its 'sqlite3' library to run SQL commands on a database.
+  * Knowing how to give Postgre authentication to access databases.
+  * Making a switch from SQL commands to commands in JSON-like format.
 - What more would you like to learn about it?
+  * Integrating these systems to a variety of Internet facing applications and using them to create robust data warehousing.
 
 Write a summary in the style of a possible blog post, and bring the
 questions/discussion to class. Bonus - later on, follow up and complete a real
